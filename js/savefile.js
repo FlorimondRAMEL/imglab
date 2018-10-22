@@ -67,7 +67,7 @@ function report_UniqueCategories(){
 function saveAsDlibXML(){
     var dlibXMLData = toDlibXML(labellingData);
     askFileName(Object.keys(labellingData).length + "_imglab.xml", function(fileName){
-        analytics_reportExportType("dlib_xml");
+//        analytics_reportExportType("dlib_xml");
         download(dlibXMLData, fileName, "text/xml", "iso-8859-1");
     });
 }
