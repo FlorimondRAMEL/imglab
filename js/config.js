@@ -84,7 +84,8 @@ var pluginsStore = {
     }
 }
 
-var suggestedCategories = ["dog", "cat", "car", "vehicle", "truck", "animal", "building", "person"];
+//var suggestedCategories = ["dog", "cat", "car", "vehicle", "truck", "animal", "building", "person"];
+var suggestedCategories = ["homme / nam", "femme / nu", "garcon / be trai", "fille / be gai", "t-shirt / ao tay ngan", "veste / ao tay dai", "pantalon / quan dai", "short / quan short", "chapeau / mu", "sac / tai", "sac a dos / balo (cap)", "bus / xe bus", "pickup / xe ban tai", "4x4 / 4x4", "berline / xe hoi (sedan)", "van / xe thung nho", "camion / xe tai", "velo / xe dap", "moto / xe may"];
 var suggestedTags = [];
 var suggestedAttributes = {
     "gender" : ["male", "female", "other"],
