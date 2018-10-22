@@ -31,7 +31,7 @@ function toDlibXML(imgs){
         for(var shape_i in shapes){
             var box = shapes [ shape_i ].bbox;
             imgXMLStr += "\t\t<box top='"+box.y+"' left='"+box.x+"' width='"+box.w+"' height='"+box.h+"'>\n";
-            imgXMLStr += "\t\t\t<label>"+ shapes [ shape_i ].label +"</label>\n";
+            imgXMLStr += "\t\t\t<label>"+ shapes [ shape_i ].category +"</label>\n";
             //Add points
             var fPoints = shapes [ shape_i ].featurePoints;
             for(var fPoint_i in fPoints){
