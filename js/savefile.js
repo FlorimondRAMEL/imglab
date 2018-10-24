@@ -64,9 +64,23 @@ function report_UniqueCategories(){
 /**
  * Save labelled data as DLIB supported XML file. It captures only boundary box detail.
  */
+
+function fillDate(value){
+    if (value < 10)
+	return('0'+value)
+    else return(value)
+}
+
 function saveAsDlibXML(){
+    var today = new Date();
+    var dd = String(fillDate(today.getDate()));
+    var mm = String(fillDate(today.getMonth()+1));
+    var yyyy = String(today.getFullYear());
+    var hh = String(fillDate(today.getHours()));
+    var mn = String(fillDate(today.getMinutes()));
+    var ss = String(fillDate(today.getSeconds()));
     var dlibXMLData = toDlibXML(labellingData);
-    askFileName(Object.keys(labellingData).length + "_imglab.xml", function(fileName){
+    askFileName(yyyy + mm + dd + hh + mn + ss + "_imglab.xml", function(fileName){
 //        analytics_reportExportType("dlib_xml");
         download(dlibXMLData, fileName, "text/xml", "iso-8859-1");
     });
